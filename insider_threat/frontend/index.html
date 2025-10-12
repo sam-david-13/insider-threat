@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insider Threat Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      🛡️ <span>Insider Threat</span>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-btn active" data-view="overview">📊 Overview</button>
+      <button class="nav-btn" data-view="users">👥 User Monitoring</button>
+      <button class="nav-btn" data-view="anomalies">⚠️ Anomaly Detection</button>
+      <button class="nav-btn" data-view="activities">📄 Activity Logs</button>
+      <button class="nav-btn" data-view="files">🔒 Confidential Files</button>
+    </nav>
+
+    <div class="status">
+      <span class="dot green"></span> All systems operational
+      <span id="last-updated"></span>
+    </div>
+  </header>
+
+  <!-- Main Page Views -->
+  <main class="content">
+    <section class="view" id="overview">
+      <h1>📊 Overview</h1>
+      <p>Welcome to the Insider Threat Detection System — where human insight meets artificial vigilance.</p>
+
+      <div class="overview-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1604079625007-d8e3a1e67b1c?auto=format&fit=crop&w=800&q=80" alt="AI Surveillance">
+          <h3>AI Surveillance</h3>
+          <p>Autonomous systems monitor digital behavior and flag suspicious activity.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="Behavior Analysis">
+          <h3>Behavior Analysis</h3>
+          <p>Machine learning agents continuously learn user activity baselines.</p>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c06a879f3d0?auto=format&fit=crop&w=800&q=80" alt="Threat Prediction">
+          <h3>Threat Prediction</h3>
+          <p>Predictive models detect anomalies before damage occurs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="view hidden" id="users">
+      <h1>👥 User Monitoring</h1>
+      <p>Monitor all digital entities under your domain.</p>
+      <div class="user-grid">
+        <div class="user-card" onclick="selectUser('user123')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="User Avatar">
+          <h4>User123</h4>
+          <p>Role: Analyst<br>Status: Active</p>
+        </div>
+
+        <div class="user-card" onclick="selectUser('user456')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png" alt="User Avatar">
+          <h4>User456</h4>
+          <p>Role: Admin<br>Status: Suspicious</p>
+        </div>
+      </div>
+    </section>
+    <section class="view hidden" id="files">
+        <h1>🔒 Confidential File Access</h1>
+        <p>Simulate user attempts to access highly restricted files. This action logs a critical activity.</p>
+        <div id="file-access-container" class="user-grid">
+            </div>
+    </section>
+
+    <section class="view hidden" id="anomalies">
+      <h1>⚠️ Anomaly Detection</h1>
+      <p>The neural sentinels scanning for irregular access patterns and insider activity.</p>
+      <img class="center-image" src="https://images.unsplash.com/photo-1620712943543-bcc4688aa70d?auto=format&fit=crop&w=1000&q=80" alt="AI Detection">
+    </section>
+
+    <section class="view hidden" id="activities">
+  <h1>📄 Activity Logs</h1>
+  <p>Track every command, message, and file access across the system.</p>
+  
+  <!-- Add this container -->
+  <div id="activity-log"></div>
+</section>
+
+
+    <section class="view hidden" id="user-detail">
+      <button onclick="backToUsers()">← Back to Users</button>
+      <h2>Details for User: <span id="userIdDisplay"></span></h2>
+      <img class="center-image" src="https://images.unsplash.com/photo-1632417761885-4a7e71b05c94?auto=format&fit=crop&w=1000&q=80" alt="User Detail AI">
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "employee_id": "EMP001",
+  "activity_type": "login_attempt",
+  "timestamp": "2025-10-11T10:30:00Z",
+  "device": "Workstation-23",
+  "location": "Office",
+  "status": "success"
+}
